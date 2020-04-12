@@ -1,0 +1,29 @@
+<div class="content-menu">
+
+  <a [routerLink]="['']">
+    <img src="assets/logo-itau-varejo-desktop.png" alt="">
+  </a>
+
+  <ul class="nav justify-content-center" *ngIf="isLogged">
+    <li class="nav-item">
+      <a class="nav-link"
+        [routerLink]="['/lancamento']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">Lançamentos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+        [routerLink]="['/adicionar']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">Adicionar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+        (click)="logout()"
+        [routerLink]="['']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">Sair</a>
+    </li>
+  </ul>
+
+</div>

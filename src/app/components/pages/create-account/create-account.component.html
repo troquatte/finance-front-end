@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="alert alert-danger col-md-5 mx-auto mt-5" *ngIf="validation" role="alert">
+    {{validation}}
+  </div>
+
+  <section class="content-login col-md-5 mx-auto pt-3 pb-4 mt-3">
+
+    <!-- Header -->
+    <h1>Cadastrar</h1>
+    <hr>
+    <!-- Final Header -->
+
+    <article>
+
+      <!-- Form -->
+      <form novalidate (ngSubmit)="submitForm()" [formGroup]="cadastroForm">
+          <!-- Field Name -->
+          <section class="form-group">
+            <label for="username">Nome</label>
+            <input type="text" class="form-control" id="username" placeholder="Insira seu Nome" formControlName="username" [ngClass]="{'is-invalid': cadastroForm.get('username').errors && (cadastroForm.get('username').touched && cadastroForm.get('username').dirty) }" required>
+            <div class="invalid-feedback">
+              *Campo obrigatório
+            </div>
+          </section>
+          <!-- Field Name -->
+
+          <!-- Field Email -->
+          <section class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email"  placeholder="Insira seu Email" formControlName="email" [ngClass]="{'is-invalid': cadastroForm.get('email').errors && (cadastroForm.get('email').touched && cadastroForm.get('email').dirty) }" required>
+            <div class="invalid-feedback">
+              *Campo obrigatório
+            </div>
+          </section>
+          <!-- Final Field Email -->
+
+          <!-- Field Password -->
+          <section class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Insira sua Senha" formControlName="password" [ngClass]="{'is-invalid': cadastroForm.get('password').errors && (cadastroForm.get('password').touched && cadastroForm.get('password').dirty) }" required>
+            <div class="invalid-feedback">
+              *Campo obrigatório
+            </div>
+          </section>
+          <!-- Final Field Password -->
+
+          <!-- Criar Conta -->
+          <button type="submit" class="btn btn-primary col-12">Cadastrar</button>
+          <!-- Final Criar Conta -->
+
+          <!-- Create Account -->
+          <a [routerLink]="['/criar-conta']" >
+            Já é cadastrado? Clique aqui e faça o Login
+          </a>
+          <!-- Final Create Account -->
+      </form>
+      <!-- Final Form -->
+
+    </article>
+  </section>
+</div>

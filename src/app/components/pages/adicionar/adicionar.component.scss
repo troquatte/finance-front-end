@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  max-width: 580px;
+
+
+  .tags{
+
+    .despesa, .receita, label, input{
+      cursor: pointer;
+    }
+
+    .despesa, .receita, label{
+      width: 100%;
+    }
+
+    .despesa,.receita{
+      position: relative;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius:5px;
+      color: $color-branco;
+      input{
+        right: 10px;
+        top: 10px;
+        opacity: 1;
+        position: absolute;
+      }
+    }
+
+    .despesa{
+      background: $color-vermelho;
+      &:hover{
+        background: $color-vermelho-escuro;
+      }
+    }
+
+    .receita{
+      background: $color-verde;
+      &:hover{
+        background: $color-verde-escuro;
+      }
+    }
+  }
+}

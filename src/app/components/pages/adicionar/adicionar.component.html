@@ -1,0 +1,102 @@
+<div class="container mt-5">
+  <!-- Title and Trace -->
+  <h1>Despesas ou Receitas</h1>
+  <hr>
+  <!-- Final Title and Trace -->
+
+  <!-- Form -->
+  <form novalidate (ngSubmit)="submitForm()" [formGroup]="cadastroForm">
+    <article class="row">
+      <!-- Description -->
+      <section class="form-group col-md-12">
+        <label for="description">Descrição</label>
+        <input type="text" class="form-control" id="description" placeholder="Insira uma Descrição" formControlName="description" name="description"  [ngClass]="{'is-invalid': cadastroForm.get('description').errors && (cadastroForm.get('description').touched && cadastroForm.get('description').dirty) }" required>
+        <div class="invalid-feedback">
+          *Campo obrigatório
+        </div>
+      </section>
+      <!-- Final Description -->
+
+      <!-- Value -->
+      <section class="form-group col-md-12">
+        <label for="value">Insira o valor</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="valueTag">R$</span>
+          </div>
+          <input type="text" [imask]="imaskConfigValue" formControlName="value" class="form-control" id="value" aria-describedby="valueTag" name="value" [ngClass]="{'is-invalid': cadastroForm.get('value').errors && (cadastroForm.get('value').touched && cadastroForm.get('value').dirty) }" required>
+          <div class="invalid-feedback">
+            *Campo obrigatório
+          </div>
+        </div>
+      </section>
+      <!-- Final Value -->
+
+      <!-- Date -->
+      <section class="form-group col-md-12">
+        <label for="type">Escolha a Data para lançamento</label>
+        <input type="text"
+        class="form-control"
+        placeholder="Datepicker"
+        formControlName="period"
+        name="period"
+        [ngClass]="{'is-invalid': !cadastroForm.get('period').valid && (cadastroForm.get('period').touched && cadastroForm.get('period').dirty) }"
+        [(ngModel)]="getDate"
+        [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+        bsDatepicker
+        #dpr="bsDatepicker" required>
+        <div class="invalid-feedback">
+          *Campo obrigatório
+        </div>
+      </section>
+      <!-- Final Date -->
+
+      <!-- Select -->
+      <section class="form-group col-md-12">
+        <label for="type">Você quer cadastrar Despesa ou Receita?</label>
+        <select class="custom-select mr-sm-2" id="type" formControlName="type" name="type" (change)="selecteListType($event)" [ngClass]="{'is-invalid': type.status}" required>
+          <option value="" selected>Escolha</option>
+          <option value="despesa">Despesa</option>
+          <option value="receita">Receita</option>
+        </select>
+        <div class="invalid-feedback">
+          *Campo obrigatório
+        </div>
+      </section>
+      <!-- Final Select -->
+
+      <!-- Tag -->
+      <section class="form-group col-md-12" *ngIf="type.value">
+        <label>Selecione uma Tag</label>
+
+        <!-- Foreach Tags -->
+        <div class="tags">
+          <div *ngFor="let tag of tagService;let i = index">
+            <div *ngIf="tag.categoria == type.value" [class]="tag.categoria">
+              <label class="form-check-label" [for]="tag.tag" >{{tag.tag}}</label>
+              <input class="form-check-input" (change)="selectTags($event)" type="checkbox" [value]="tag.id" [id]="tag.tag" [name]="tags" >
+
+              <div *ngFor="let mytag of loadUsersTags;">
+                <input class="form-check-input" *ngIf="tag.id == mytag" [checked]="mytag == tag.id" (change)="selectTags($event)" type="checkbox" [value]="tag.id" [id]="tag.tag" [name]="tags" >
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Foreach Tags -->
+
+      </section>
+      <!-- Final Tag -->
+
+      <!-- Submit -->
+      <section class="form-group col-md-12">
+        <hr>
+        <button type="submit" [disabled]="buttomDisabled"  class="col-md-12 btn btn-success">Salvar</button>
+      </section>
+      <!-- Final Submit -->
+
+    </article>
+  </form>
+  <!-- Final Form -->
+
+</div>

@@ -1,0 +1,33 @@
+@import "../../../styles/variables.scss";
+
+$boder: 2px;
+
+.content-balance{
+  border:$boder solid $color-bege-escuro;
+  border-radius: .25rem;
+
+  .card:nth-child(1){
+    .card-body .card-text{
+      color: $color-verde;
+    }
+  }
+
+  .card:nth-child(2){
+    border-left: $boder solid $color-bege-escuro;
+    border-right: $boder solid $color-bege-escuro;
+    .card-body .card-text{
+      color: red;
+    }
+  }
+
+  .card{
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    .card-body .card-text{
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+
+}

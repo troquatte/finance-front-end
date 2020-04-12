@@ -1,0 +1,13 @@
+<div class="container-pagination mt-5 mb-5">
+    <a class="icon-prev" (click)="prevPage(data.page - 1)"></a>
+
+    <div class="current-page">
+      <input type="text" [value]="data.page" [imask]="imaskNumber" (keydown)="submitPage($event)">
+    </div>
+
+    <div class="total-page">
+      <input type="text" [value]="totalPage" disabled >
+    </div>
+
+    <a class="icon-next" (click)="nextPage(data.lastPage)"></a>
+</div>

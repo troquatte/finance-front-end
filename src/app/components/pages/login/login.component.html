@@ -1,0 +1,51 @@
+<div class="container">
+
+  <div class="alert alert-danger col-md-5 mx-auto mt-5" *ngIf="validation" role="alert">
+    {{validation}}
+  </div>
+
+  <section class="content-login col-md-5 mx-auto pt-3 pb-4 mt-5">
+    <!-- Header -->
+    <h1>Entrar</h1>
+    <hr>
+    <!-- Final Header -->
+
+    <article>
+      <!-- Form -->
+      <form novalidate (ngSubmit)="submitForm()" [formGroup]="loginForm">
+          <!-- Field Email -->
+          <section class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email"  placeholder="Insira seu Email" formControlName="email" [ngClass]="{'is-invalid': loginForm.get('email').errors && (loginForm.get('email').touched && loginForm.get('email').dirty) }" required>
+            <div class="invalid-feedback">
+              *Campo obrigatório
+            </div>
+          </section>
+          <!-- Final Field Email -->
+
+          <!-- Field Password -->
+          <section class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Insira sua Senha" formControlName="password" [ngClass]="{'is-invalid': loginForm.get('password').errors && (loginForm.get('password').touched && loginForm.get('password').dirty) }" required>
+            <div class="invalid-feedback">
+              *Campo obrigatório
+            </div>
+          </section>
+          <!-- Final Field Password -->
+
+          <!-- Entrar -->
+          <button type="submit" class="btn btn-primary col-12">Entrar</button>
+          <!-- Entrar -->
+
+          <!-- Create Account -->
+          <a [routerLink]="['/criar-conta']" >
+            Criar uma conta? Cadastro
+          </a>
+          <!-- Final Create Account -->
+
+      </form>
+      <!-- Final Form -->
+    </article>
+
+  </section>
+</div>

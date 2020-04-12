@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+
+.content-search{
+  background: $color-bege-escuro; padding-top:15px
+}
+ul li{
+  cursor: pointer;
+  margin: 0;
+  padding: 20px;
+  border-bottom: 1px solid $color-bege-escuro;
+  &:hover{
+    background: $color-branco;
+  }
+
+  .action-list{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+
+    a{
+      text-decoration:none;
+      color: $color-laranja;
+      float: left;
+      margin:5px
+    }
+  }
+}

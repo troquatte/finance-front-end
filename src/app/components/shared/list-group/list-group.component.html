@@ -1,0 +1,85 @@
+<!-- Search -->
+<div class="row mt-5 content-search">
+  <form class="col-12" novalidate (ngSubmit)="searchSubmitForm()" [formGroup]="search" >
+    <article class="row">
+      <h5 class="col-md-12">Faça o Filtro de suas Despesas e Receitas</h5>
+      <!-- Tags -->
+      <div class="form-group col-md-5">
+        <select class="form-control" name="tag" formControlName="tag">
+          <option selected value="">Selecione uma Tag</option>
+          <option *ngFor="let tag of tagService" [value]="tag.id">{{tag.tag}}</option>
+        </select>
+      </div>
+
+      <!-- Picker Range -->
+      <div class="form-group col-md-3">
+        <input type="text"
+          placeholder="Selecione a data"
+          class="form-control"
+          name="rangePick"
+          formControlName="rangePick"
+          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+          bsDaterangepicker >
+      </div>
+
+      <!-- Confirm -->
+      <div class="form-group col-md-4">
+        <button type="submit" class="btn btn-primary mb-2 col-md-12">Confirm identity</button>
+      </div>
+
+
+      <!-- Tags -->
+    </article>
+  </form>
+</div>
+<!-- Search -->
+
+<!-- Itens Balance -->
+<app-balance [setBalance]="outputSearch"></app-balance>
+<!-- Final Itens Balance -->
+
+<!-- Loading -->
+<div class="d-flex justify-content-center mt-5" *ngIf="loadinList">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<!-- Final Loading -->
+
+<!-- List -->
+<div *ngIf="responseLoadList && responseLoadList.length">
+  <!-- Balance -->
+
+  <!-- List -->
+  <ul class="list-unstyled row mt-5" >
+    <li class="media col-12" *ngFor="let list of responseLoadList; let i = index">
+      <img src="assets/logo-itau-varejo-desktop.png" width="45px" class="mr-3" alt="...">
+
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">
+          {{list.description}}
+        </h5>
+
+        <section>
+          <span class="badge" [ngClass]="{'badge-success': list.type == 'receita', 'badge-danger': list.type == 'despesa' }">{{list.type.toUpperCase()}}</span>
+          <span class="badge ml-1" [ngClass]="{'badge-success': list.type == 'receita', 'badge-danger': list.type == 'despesa' }">R$ {{list.value}}</span>
+          <span class="ml-1"><strong>Data:</strong> {{list.period}}</span>
+          <span *ngIf="list.tag.length"><strong> | Tags:</strong> <span class="mr-1 ml-1 badge badge-light" *ngFor="let t of list.tag">{{t.tag}}</span></span>
+        </section>
+
+        <section class="action-list">
+          <a [routerLink]="['/editar', list.id]">
+            <span class="icon-edit"></span>
+          </a>
+
+          <a (click)="deleteList(i, list.id)">
+            <span class="icon-delete"></span>
+          </a>
+        </section>
+      </div>
+    </li>
+  </ul>
+  <!-- List -->
+  <app-pagination (pagination)="pagination($event)" [data]="responsePaginator"></app-pagination>
+</div>
+<!-- Final List -->
