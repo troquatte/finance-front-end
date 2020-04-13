@@ -1,27 +1,102 @@
-# FinancesFrontEnd
+<h1 align="center">
+  <img src="https://vidafullstack.com.br/wp-content/uploads/2020/04/angular.png" alt="" width="150">
+  <br>
+    Desafio feito para Vaga Engenheiro Front-end Itaú.
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+## :custard: Descrição
 
-## Development server
+Arquitetura e criação do back-end ( microserviços ), front-end e docker ( compose )
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<strong>Front-end:</strong> Foi usado Angular 9 devido sua capacidade de desenvolvimento onde temos uma arquiterura baseada em OOP diferente de outras ferramentas no front-end.
 
-## Code scaffolding
+<ul>
+  <li>Ngx Bootstrap - Lib Angular que ajuda na criação de telas mantida por um grande player de mercado javascript.</li>
+  <li>MomentJs - Usado para validar datas na aplicação deixando de uma forma mais limpa e clara.</li>
+</ul>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<strong>Micro serviços Back-end:</strong> Feito em nodeJs com framework adonisJs, uma ferramenta bem rápida e fácil de ser usada e apropriada para o uso de Micro serviços.
 
-## Build
+<strong>Banco de dados postgres:</strong> o uso está relacionadas à economia e ao alto desempenho para plataforma. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<br>
+ <img src="https://vidafullstack.com.br/wp-content/uploads/2020/04/download.jpg" alt="" width="100%">
+<br>
 
-## Running unit tests
+## :information_source: Como usar?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Baixe o arquivo compose docker-compose.yaml
 
-## Running end-to-end tests
+```bash
+# Clone this repository 
+$ git clone https://github.com/troquatte/finances-docker-compose.git
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Go into the repository
+$ cd finances-docker-compose
 
-## Further help
+# Up Docker Compose
+$ docker-compose up -d
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Access port
+$ http:localhost:80
+
+```
+
+## :information_source: Arquivos usados
+
+Repositório de arquivos usados na aplicação
+
+```bash
+# Docker Copose
+https://github.com/troquatte/finances-docker-compose
+
+# Front-end - Angular
+https://github.com/troquatte/finance-front-end
+
+# Api GateWay
+https://github.com/troquatte/finance-api-gateway
+
+# Api Balance
+https://github.com/troquatte/finances-api-balance
+
+#Api Expense
+https://github.com/troquatte/finance-api-expenses
+
+#Api Data Expense
+https://github.com/troquatte/finance-api-data-expenses
+
+#Script Postgres
+https://github.com/troquatte/finance-db-postgres
+
+```
+
+## :information_source: Docker Images
+
+Repositório de arquivos usados na aplicação Docker
+
+```bash
+# Docker Copose
+https://github.com/troquatte/finances-docker-compose
+
+# Front-end - Angular
+https://hub.docker.com/repository/docker/dtroquatte/finance-front-end
+
+# Api GateWay
+https://hub.docker.com/repository/docker/dtroquatte/finance-api-gateway
+
+# Api Balance
+https://hub.docker.com/repository/docker/dtroquatte/finance-api-balance
+
+#Api Expense
+https://hub.docker.com/repository/docker/dtroquatte/finance-api-expenses
+
+#Api Data Expense
+https://hub.docker.com/repository/docker/dtroquatte/finance-api-data-expenses
+
+#Script Postgres
+https://hub.docker.com/repository/docker/dtroquatte/finances-postgres
+```
+
+---
+
+Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C3%A3o-pedro-troquatte-ababa079/) | [Blog!](https://vidafullstack.com.br/)
