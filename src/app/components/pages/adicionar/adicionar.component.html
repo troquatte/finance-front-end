@@ -37,11 +37,10 @@
         <label for="type">Escolha a Data para lançamento</label>
         <input type="text"
         class="form-control"
-        placeholder="Datepicker"
+        placeholder="Clique aqui e selecione uma Data"
         formControlName="period"
         name="period"
         [ngClass]="{'is-invalid': !cadastroForm.get('period').valid && (cadastroForm.get('period').touched && cadastroForm.get('period').dirty) }"
-        [(ngModel)]="getDate"
         [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
         bsDatepicker
         #dpr="bsDatepicker" required>

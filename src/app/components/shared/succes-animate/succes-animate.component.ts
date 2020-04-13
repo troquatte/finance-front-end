@@ -17,7 +17,7 @@ export class SuccesAnimateComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
       this.close()
-      this.router.navigateByUrl("/lancamento");
+      this.router.navigate(["/lancamento"]);
     },1500)
   }
 

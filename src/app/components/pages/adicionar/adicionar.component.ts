@@ -7,7 +7,7 @@ import { FormBuilder, Validators, FormGroup, FormArray, FormControl } from '@ang
 
 //Interfaces
 import { Adicionar } from "../../../models/adicionar";
-import { Tags } from 'src/app/models/Tags';
+import { Tags } from 'src/app/models/tags';
 
 //Services
 import { ExpensesService } from 'src/app/service/expenses.service';
@@ -15,7 +15,7 @@ import { SuccesAnimateComponent } from '../../shared/succes-animate/succes-anima
 
 //Pugins
 import * as moment from 'moment';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-adicionar',
@@ -159,7 +159,7 @@ export class AdicionarComponent implements OnInit {
   public submitForm(){
     // this.cadastroForm.dirty && this.cadastroForm.valid && this.type.value
     //Validate Form and Submit
-    if (true) {
+    if (this.cadastroForm.dirty && this.cadastroForm.valid && this.type.value) {
       //Block Button Submit Form
       this.submit = true;
       this.buttomDisabled = this.submit;

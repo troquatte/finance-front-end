@@ -29,12 +29,13 @@ export class LoginComponent implements OnInit {
 
   submitForm(){
     if (this.loginForm.dirty && this.loginForm.valid){
-      localStorage.removeItem('access_token');
+      sessionStorage.removeItem('access_token');
 
       this.accountsService.loginUser(this.loginForm.value).subscribe(
         res => {
-            localStorage.setItem('access_token', `${res}`);
-            window.location.href = "/lancamento"
+            sessionStorage.setItem('access_token', `${res}`);
+            this.router.navigate(["/lancamento"]);
+
         },
         err => {
           this.validation = "Usuário ou Senha já cadastrado"

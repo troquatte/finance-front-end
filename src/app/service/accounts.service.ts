@@ -51,7 +51,7 @@ export class AccountsService {
 
   public isAuthenticated(): boolean{
     //Verifica o Token no localStorage
-    const token = localStorage.getItem('access_token');
+    const token = sessionStorage.getItem('access_token');
     //Pergunta se o token já expirou
     return !this.jwtHelper.isTokenExpired(token);
   }

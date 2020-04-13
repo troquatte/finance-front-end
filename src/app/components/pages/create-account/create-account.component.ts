@@ -31,14 +31,15 @@ export class CreateAccountComponent implements OnInit {
 
   submitForm(){
     if (this.cadastroForm.dirty && this.cadastroForm.valid){
-      localStorage.removeItem('access_token');
+      sessionStorage.removeItem('access_token');
 
       this.accountsService.createUser(this.cadastroForm.value).subscribe(
         res => {
           this.accountsService.loginUser(this.cadastroForm.value).subscribe(
             res => {
-              localStorage.setItem('access_token', `${res}`);
-              window.location.href = "/lancamento";
+              sessionStorage.setItem('access_token', `${res}`);
+              this.router.navigate(["/lancamento"]);
+
             }
           )
         },

@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 
 //Interfaces
 import { Adicionar } from '../models/adicionar';
-import { Tags } from '../models/Tags';
+import { Tags } from '../models/tags';
 
 @Injectable({
   providedIn: 'root'

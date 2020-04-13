@@ -15,13 +15,17 @@ export class NavComponent implements OnInit {
     this.login();
   }
 
+  ngAfterContentChecked(): void {
+    this.login();
+  }
+
   public logout(){
     this.isLogged = false;
-    return localStorage.removeItem('access_token');
+    return sessionStorage.removeItem('access_token');
   }
 
   public login(){
-    if(localStorage.getItem('access_token') != null){
+    if(sessionStorage.getItem('access_token') != null){
       return this.isLogged = true;
     }
   }
