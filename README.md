@@ -101,42 +101,4 @@ https://hub.docker.com/repository/docker/dtroquatte/finances-postgres
 
 Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C3%A3o-pedro-troquatte-ababa079/) | [Blog!](https://vidafullstack.com.br/)
 
-# Backend Tibs-Platform
-
-## :information_source: No Tibs-Platform utilizamos algumas ferramentas como:
-
-<ul>
-  <li>NodeJs com Restify: http://restify.com/</li>
-  <li>Banco de dados MongoDB, você pode utilizar o robomongo como gerenciador de interface https://robomongo.org/</li>
-  <li>Redis</li>
-  <li>Rabbitmq</li>
-  <li>E Docker para facilitar nosso ambiente de desenvolvimento</li>
-</ul>
-
-## :information_source: Vamos configurar o ambiente de trabalho?
-
-<p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
-<p><strong>É só seguir os passos abaixo:</strong></p>
-<ol>
-  <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
-  <li>Em seu terminal digite: <code>docker-compose up</code>, esse comando instala nossas imagens.</li>
-  <li>Depois que todos os processo tiverem ok, verifique se todos estão com STATUS Up com o comando: <code>docker ps -a</code></li>
-  <li>Vamos configurar o mongo e para isso inicie ele com um dos dois comandos:</li>
-  <ul>
-    <li><code>docker exec -it mongo-tibs /bin/bash´´´</code></li>
-    <li><code>docker exec -it mongo-tibs sh</code></li>
-  </ul>
-  <li>Em seguida: <code>mongosh --port 27017  --authenticationDatabase "admin" -u "root" -p</code></li>
-  <ul>
-    <li>Ele irá te pedir a senha: <strong>Tibs123!</strong> ( ela se encontra no docker-compose.yaml )</li>
-  </ul>
-  <li>Assim que acessar o Mongo digite: <code>use admin</code></li>
-  <li>Em seguida: <code>db.createUser( { user: "tibs-api", pwd: "uhYLv#qMRE3ECp$N", roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] } )</code></li>
-  <li>Agora com muita **ATENÇÃO**, procure nos arquivos e commente:</li>
-  <ul>
-    <li>Se estiver no VSCODE, clique na lupinha de busca ou pressione <code>Ctrl + Shift + F</code></li>
-    <li>Commente todas as linhas com: <code>authSource: this.options.common.mongodb.authSource,</code></li>
-  </ul>
-</ol>
-
 
