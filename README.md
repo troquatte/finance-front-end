@@ -120,7 +120,7 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 <p>É só seguir os passos a baixo:</p>
 <ol>
   <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
-  <li>Em seu terminal digite: <code>docker-compose up<code></li>
+  <li>Em seu terminal digite: <code>docker-compose up</code></li>
   <li>Depois que todos os processo forem feito em seu terminal verifique se estão todos com STATUS Up com o comando: <code>docker ps -a<code></li>
   <li>Vamos configurar o mongo e para isso inicie com um dos dois comandos:</li>
   <ul>
@@ -139,4 +139,5 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
     <li><code>authSource: this.options.common.mongodb.authSource,</code></li>
   </ul>
 </ol>
+
 
