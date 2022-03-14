@@ -112,9 +112,9 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
   <li>Rabbitmq</li>
   <li>E Docker para facilitar nosso ambiente de desenvolvimento</li>
 </ul>
- 
 
 ## :information_source: Vamos configurar o ambiente de trabalho?
+
 <p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
 <p><strong>É só seguir os passos abaixo:</strong></p>
 <ol>
@@ -132,11 +132,10 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
   </ul>
   <li>Assim que acessar o Mongo digite: <code>use admin</code></li>
   <li>Em seguida: <code>db.createUser( { user: "tibs-api", pwd: "uhYLv#qMRE3ECp$N", roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] } )</code></li>
-  <li>Feito isso configuramos nosso ambiente, porém agora falta apenas 1 etapa</li>
-  <li>Agora com muita atenção procure nos arquivos por essa linha de código e a comente:</li>
+  <li>Agora com muita **ATENÇÃO**, procure nos arquivos e commente:</li>
   <ul>
     <li>Se estiver no VSCODE, clique na lupinha de busca ou pressione <code>Ctrl + Shift + F</code></li>
-    <li><code>authSource: this.options.common.mongodb.authSource,</code></li>
+    <li>Commente todas as linhas com: <code>authSource: this.options.common.mongodb.authSource,</code></li>
   </ul>
 </ol>
 
