@@ -100,3 +100,43 @@ https://hub.docker.com/repository/docker/dtroquatte/finances-postgres
 ---
 
 Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C3%A3o-pedro-troquatte-ababa079/) | [Blog!](https://vidafullstack.com.br/)
+
+
+
+# Backend Tibs-Platform
+
+<h1>Tibs-Platform utilizamos algumas ferramentas como:</h1>
+
+<ul>
+  <li>NodeJs com Restify: http://restify.com/</li>
+  <li>Banco de dados MongoDB, você pode utilizar o robomongo como gerenciador de interface https://robomongo.org/</li>
+  <li>Redis</li>
+  <li>Rabbitmq</li>
+  <li>E Docker para facilitar nosso ambiente de desenvolvimento</li>
+</ul>
+
+<h2>Vamos configurar o ambiente de trabalho?</h2>
+<p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
+<p>É só seguir os passos a baixo:</p>
+<ol>
+  <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
+  <li>Em seu terminal digite: <code>docker-compose up<code></li>
+  <li>Depois que todos os processo forem feito em seu terminal verifique se estão todos com STATUS Up com o comando: <code>docker ps -a<code></li>
+  <li>Vamos configurar o mongo e para isso inicie com um dos dois comandos:</li>
+  <ul>
+    <li><code>docker exec -it mongo-tibs /bin/bash´´´</code></li>
+    <li><code>docker exec -it mongo-tibs sh</code></li>
+  </ul>
+  <li>Em seguida <code>mongosh --port 27017  --authenticationDatabase "admin" -u "root" -p</code></li>
+  <ul>
+    <li>Ele irá te pedir a senha: Tibs123! ( ele se encontra no docker-compose.yaml )</li>
+  </ul>
+  <li>Assim que acessar o Mongo digite: use admin</code></li>
+  <li><code>db.createUser( { user: "tibs-api", pwd: "uhYLv#qMRE3ECp$N", roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] } )</code></li>
+  <li>Feito isso configuramos nosso ambiente, porém agora falta apenas 1</li>
+  <li>Agora com muita atenção procure nos arquivos por essa linha de código e a comente:</li>
+  <ul>
+    <li><code>authSource: this.options.common.mongodb.authSource,</code></li>
+  </ul>
+</ol>
+
