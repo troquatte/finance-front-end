@@ -103,10 +103,8 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 
 # Backend Tibs-Platform
 
-## :custard: No Tibs-Platform utilizamos algumas ferramentas como:
+## :information_source: No Tibs-Platform utilizamos algumas ferramentas como:
 
-
-```bash
 <ul>
   <li>NodeJs com Restify: http://restify.com/</li>
   <li>Banco de dados MongoDB, você pode utilizar o robomongo como gerenciador de interface https://robomongo.org/</li>
@@ -114,9 +112,9 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
   <li>Rabbitmq</li>
   <li>E Docker para facilitar nosso ambiente de desenvolvimento</li>
 </ul>
-```
+ 
 
-## :custard: Vamos configurar o ambiente de trabalho?
+## :information_source: Vamos configurar o ambiente de trabalho?
 <p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
 <p><strong>É só seguir os passos abaixo:</strong></p>
 <ol>
