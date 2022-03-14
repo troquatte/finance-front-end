@@ -117,10 +117,10 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 
 <h2>Vamos configurar o ambiente de trabalho?</h2>
 <p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
-<p>É só seguir os passos a baixo:</p>
+<p><strong>É só seguir os passos a baixo:</strong></p>
 <ol>
   <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
-  <li>Em seu terminal digite: <code>docker-compose up</code></li>
+  <li>Em seu terminal digite: <code>docker-compose up</code>, esse comando instala nossas imagens.</li>
   <li>Depois que todos os processo tiverem ok, verifique se todos com STATUS Up com o comando: <code>docker ps -a</code></li>
   <li>Vamos configurar o mongo e para isso inicie com um dos dois comandos:</li>
   <ul>
