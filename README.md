@@ -126,12 +126,12 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
     <li><code>docker exec -it mongo-tibs /bin/bash´´´</code></li>
     <li><code>docker exec -it mongo-tibs sh</code></li>
   </ul>
-  <li>Em seguida <code>mongosh --port 27017  --authenticationDatabase "admin" -u "root" -p</code></li>
+  <li>Em seguida: <code>mongosh --port 27017  --authenticationDatabase "admin" -u "root" -p</code></li>
   <ul>
-    <li>Ele irá te pedir a senha: <strong>Tibs123!</string> ( ela se encontra no docker-compose.yaml )</li>
+    <li>Ele irá te pedir a senha: <strong>Tibs123!</strong> ( ela se encontra no docker-compose.yaml )</li>
   </ul>
   <li>Assim que acessar o Mongo digite: <code>use admin</code></li>
-  <li><code>db.createUser( { user: "tibs-api", pwd: "uhYLv#qMRE3ECp$N", roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] } )</code></li>
+  <li>Em seguida: <code>db.createUser( { user: "tibs-api", pwd: "uhYLv#qMRE3ECp$N", roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] } )</code></li>
   <li>Feito isso configuramos nosso ambiente, porém agora falta apenas 1 etapa</li>
   <li>Agora com muita atenção procure nos arquivos por essa linha de código e a comente:</li>
   <ul>
