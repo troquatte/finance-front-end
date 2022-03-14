@@ -120,20 +120,22 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
   <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
   <li>Em seu terminal digite: <code>docker-compose up</code>, esse comando instala nossas imagens.</li>
   <li>Depois que todos os processo tiverem ok, verifique se todos estão com STATUS Up com o comando: <code>docker ps -a</code></li>
-  <li>Vamos configurar o mongo e para isso inicie com um dos dois comandos:</li>
+  <li>Vamos configurar o mongo e para isso inicie ele com um dos dois comandos:</li>
   <ul>
     <li><code>docker exec -it mongo-tibs /bin/bash´´´</code></li>
     <li><code>docker exec -it mongo-tibs sh</code></li>
   </ul>
   <li>Em seguida <code>mongosh --port 27017  --authenticationDatabase "admin" -u "root" -p</code></li>
   <ul>
-    <li>Ele irá te pedir a senha: Tibs123! ( ele se encontra no docker-compose.yaml )</li>
+    <li>Ele irá te pedir a senha: <strong>Tibs123!</string> ( ela se encontra no docker-compose.yaml )</li>
   </ul>
-  <li>Assim que acessar o Mongo digite: use admin</code></li>
+  <li>Assim que acessar o Mongo digite: <code>use admin</code></li>
   <li><code>db.createUser( { user: "tibs-api", pwd: "uhYLv#qMRE3ECp$N", roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] } )</code></li>
-  <li>Feito isso configuramos nosso ambiente, porém agora falta apenas 1</li>
+  <li>Feito isso configuramos nosso ambiente, porém agora falta apenas 1 etapa</li>
   <li>Agora com muita atenção procure nos arquivos por essa linha de código e a comente:</li>
   <ul>
+    <li>Se estiver no VSCODE, clique na lupinha de busca ou pressione <code>Ctrl + Shift + F</code></li>
     <li><code>authSource: this.options.common.mongodb.authSource,</code></li>
   </ul>
 </ol>
+
