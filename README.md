@@ -115,7 +115,7 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 
 <h2>Vamos configurar o ambiente de trabalho?</h2>
 <p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
-<p><strong>É só seguir os passos a baixo:</strong></p>
+<p><strong>É só seguir os passos abaixo:</strong></p>
 <ol>
   <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
   <li>Em seu terminal digite: <code>docker-compose up</code>, esse comando instala nossas imagens.</li>
@@ -138,4 +138,5 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
     <li><code>authSource: this.options.common.mongodb.authSource,</code></li>
   </ul>
 </ol>
+
 
