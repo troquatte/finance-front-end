@@ -105,7 +105,7 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 
 # Backend Tibs-Platform
 
-<h1>Tibs-Platform utilizamos algumas ferramentas como:</h1>
+<h1>No Tibs-Platform utilizamos algumas ferramentas como:</h2>
 
 <ul>
   <li>NodeJs com Restify: http://restify.com/</li>
@@ -121,7 +121,7 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 <ol>
   <li>Abra o terminal e acesse a pasta do docker <code>cd docker</code></li>
   <li>Em seu terminal digite: <code>docker-compose up</code></li>
-  <li>Depois que todos os processo forem feito em seu terminal verifique se estão todos com STATUS Up com o comando: <code>docker ps -a</code></li>
+  <li>Depois que todos os processo tiverem ok, verifique se todos com STATUS Up com o comando: <code>docker ps -a</code></li>
   <li>Vamos configurar o mongo e para isso inicie com um dos dois comandos:</li>
   <ul>
     <li><code>docker exec -it mongo-tibs /bin/bash´´´</code></li>
@@ -139,5 +139,6 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
     <li><code>authSource: this.options.common.mongodb.authSource,</code></li>
   </ul>
 </ol>
+
 
 
