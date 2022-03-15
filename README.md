@@ -114,8 +114,6 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
   <li>E Docker para facilitar nosso ambiente de desenvolvimento</li>
 </ul>
 
-Separamos um mapa com explicações breves sobre a aplicação: https://drive.google.com/file/d/16PkMh3cXCNb_9ep7KaaCVgLZ4EE7XuMs/view?usp=sharing
-
 ## :information_source: Vamos configurar o ambiente de trabalho?
 
 <p>Iremos utilizar o docker para subir nosso ambiente. Caso não tenha, instale https://www.docker.com</p>
@@ -142,5 +140,10 @@ Separamos um mapa com explicações breves sobre a aplicação: https://drive.go
   </ul>
   <li>Agora vamos rodar o node: <code>npm run serve</code></li>
 </ol>
+
+## :information_source: Mapa de arquivos!
+
+<img src="./doc/images/block4.png" alt="" width="100%"/>
+
 
 
