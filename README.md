@@ -143,7 +143,7 @@ Por ♥ Dener Troquatte :wave: [Linkedin!](https://www.linkedin.com/in/dener-s%C
 
 ## :information_source: Mapa de arquivos!
 
-<img src="./doc/block4.png" alt="" width="100%"/>
+<img src="./doc/block4.png" alt=""  />
 
 
 
